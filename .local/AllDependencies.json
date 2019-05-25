@@ -1172,14 +1172,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Office.Interop.Word 15.0.4797.1003' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Microsoft.Office.Interop.Word"
-    }
-  ]
+  }
 }

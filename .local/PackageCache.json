@@ -2,6 +2,15 @@
   "Packages": [
     {
       "Package": {
+        "Id": "Microsoft.Office.Interop.Word",
+        "Version": "15.0.4797.1003"
+      },
+      "Assemblies": [
+        "C:\\Users\\Alejo\\.nuget\\packages\\microsoft.office.interop.word/15.0.4797.1003\\lib/net20/Microsoft.Office.Interop.Word.dll"
+      ]
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.6.0"
       },
@@ -102,15 +111,6 @@
         "C:\\Users\\Alejo\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
         "C:\\Users\\Alejo\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Alejo\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "Microsoft.Office.Interop.Word",
-        "Version": "15.0.4797.1003"
-      },
-      "Assemblies": [
-        "C:\\Users\\Alejo\\.nuget\\packages\\microsoft.office.interop.word/15.0.4797.1003\\lib/net20/Microsoft.Office.Interop.Word.dll"
       ]
     },
     {
