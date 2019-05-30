@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,3416" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="690,2416" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
@@ -48,7 +48,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="636,3197" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="650,2296" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="rawContent" />
       <Variable x:TypeArguments="x:String" Name="filePath" />
@@ -179,26 +179,39 @@
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
     </Flowchart>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[rawContent]" TopMost="True" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="hoja1=hoja.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)                " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="628,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="628,51" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[rawContent]" TopMost="True">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="hoja1=hoja.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)                " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="628,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="hoja">[rawContent]</InArgument>
         <OutArgument x:TypeArguments="s:String[]" x:Key="hoja1">[Data]</OutArgument>
       </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="614,1036" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Data]">
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="628,51" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Data]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="264,905" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="264,921" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="242,59" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="ui:GenericValue">[fila]</OutArgument>
               </Assign.To>
@@ -206,7 +219,7 @@
                 <InArgument x:TypeArguments="ui:GenericValue">[item.ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[fila.Contains(&quot;Estudios actuales&quot;)]" DisplayName="If estudio actual" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[fila.Contains(&quot;Estudios actuales&quot;)]" DisplayName="If estudio actual" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -297,7 +310,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[fila.Contains(&quot;Idioma Extranjero&quot;)]" DisplayName="If idiomas" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[fila.Contains(&quot;Idioma Extranjero&quot;)]" DisplayName="If idiomas" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -345,7 +358,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[fila.Contains(&quot;nacimiento&quot;) or fila.Contains(&quot;NACIMIENTO&quot;)]" DisplayName="If nacimiento" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_7">
+            <If Condition="[fila.Contains(&quot;nacimiento&quot;) or fila.Contains(&quot;NACIMIENTO&quot;)]" DisplayName="If nacimiento" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -438,7 +451,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[fila.Contains(&quot;Libreta Militar&quot;) or fila.Contains(&quot;LIBRETA MILITAR&quot;) or fila.Contains(&quot;libreta militar&quot;) or fila.Contains(&quot;Libreta militar&quot;) or fila.Contains(&quot;libreta Militar&quot;)]" DisplayName="If Libreta Militar" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_9">
+            <If Condition="[fila.Contains(&quot;Libreta Militar&quot;) or fila.Contains(&quot;LIBRETA MILITAR&quot;) or fila.Contains(&quot;libreta militar&quot;) or fila.Contains(&quot;Libreta militar&quot;) or fila.Contains(&quot;libreta Militar&quot;)]" DisplayName="If Libreta Militar" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -471,7 +484,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[fila.Contains(&quot;C.C&quot;) or fila.Contains(&quot;c.c&quot;)]" DisplayName="If cedula" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_10">
+            <If Condition="[fila.Contains(&quot;C.C&quot;) or fila.Contains(&quot;c.c&quot;)]" DisplayName="If cedula" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -504,7 +517,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[fila.Contains(&quot;Perfil&quot;) or fila.Contains(&quot;PERFIL&quot;) or fila.Contains(&quot;perfil&quot;)]" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_11">
+            <If Condition="[fila.Contains(&quot;Perfil&quot;) or fila.Contains(&quot;PERFIL&quot;) or fila.Contains(&quot;perfil&quot;)]" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -529,7 +542,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[fila.Contains(&quot;Formación Académica&quot;) Or fila.Contains(&quot;FORMACIÓN ACADÉMICA&quot;) Or fila.Contains(&quot;formación académica&quot;)]" sap:VirtualizedContainerService.HintSize="242,49" sap2010:WorkflowViewState.IdRef="If_12">
+            <If Condition="[fila.Contains(&quot;Formación Académica&quot;) Or fila.Contains(&quot;FORMACIÓN ACADÉMICA&quot;) Or fila.Contains(&quot;formación académica&quot;)]" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -547,7 +560,7 @@
                 </Assign>
               </If.Then>
             </If>
-            <Assign sap:VirtualizedContainerService.HintSize="242,59" sap2010:WorkflowViewState.IdRef="Assign_34">
+            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_34">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[j]</OutArgument>
               </Assign.To>
@@ -560,12 +573,12 @@
       </ui:ForEach.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For counter=(init+1) To (final-1)  &#xD;&#xA;     perfil=perfil+Data(counter)&#xD;&#xA;Next  counter " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="614,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For counter=(init+1) To (final-1)  &#xA;     perfil=perfil+Data(counter)&#xA;Next  counter " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="628,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:Int32" x:Key="init">[init]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="final">[final]</InArgument>
@@ -573,15 +586,14 @@
         <OutArgument x:TypeArguments="x:String" x:Key="perfil">[perfil]</OutArgument>
         <InArgument x:TypeArguments="s:String[]" x:Key="Data">[Data]</InArgument>
       </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
-    <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Nombre" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[Data(2)]" TopMost="True" />
-    <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Cedula" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[cedula(1)]" TopMost="True" />
-    <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Fecha de Nacimiento" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[nacimiento]" TopMost="True" />
-    <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Libreta Militar" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[libreta]" TopMost="True" />
-    <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Estudios actuales" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[estudio]" TopMost="True" />
-    <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Idiomas" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_15" Text="[idioma]" TopMost="True" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="614,59" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[perfil]" TopMost="True" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim Result As List(Of String) = New List(Of String)&#xD;&#xA;For Each element As String In Data&#xD;&#xA;&#x9;Console.WriteLine(element)&#xD;&#xA;&#x9;If element.Equals(&quot; &quot;) Or element.Equals(&quot;/&quot;) Then&#xD;&#xA;&#x9;&#x9;Continue For&#xD;&#xA;&#x9;End If&#xD;&#xA;&#x9;Result.Add(element)&#xD;&#xA;Next element&#xD;&#xA;Data = Result.ToArray" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="628,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim Result As List(Of String) = New List(Of String)&#xA;For Each element As String In Data&#xA;&#x9;Console.WriteLine(element)&#xA;&#x9;If element.Equals(&quot; &quot;) Or element.Equals(&quot;/&quot;) Then&#xA;&#x9;&#x9;Continue For&#xA;&#x9;End If&#xA;&#x9;Result.Add(element)&#xA;Next element&#xA;Data = Result.ToArray" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="628,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="s:String[]" x:Key="Data">[Data]</InOutArgument>
       </ui:InvokeCode.Arguments>
@@ -592,5 +604,6 @@
     <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Libreta Militar" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[libreta]" TopMost="True" />
     <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Estudios actuales" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[estudio]" TopMost="True" />
     <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Idiomas" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="MessageBox_15" Text="[idioma]" TopMost="True" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Perfil" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[perfil]" TopMost="True" />
   </Sequence>
 </Activity>
